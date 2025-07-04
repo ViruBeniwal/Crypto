@@ -1,9 +1,9 @@
-# 🪙 Crypto Price Movement Classification
+#  Crypto Price Movement Classification
 
 Author: **Virendra Beniwal**  
 Date: **July 2025**
 
-## 📌 Project Overview
+##  Project Overview
 
 This project aims to classify short-term price movement of a cryptocurrency (e.g., BTC/USD) using historical minute-level market data. The goal is to predict the **5-minute future return** and categorize it into one of six classes, representing different levels of price change.
 
@@ -11,7 +11,7 @@ Although predicting crypto movements is notoriously difficult due to market nois
 
 ---
 
-## 🧠 Problem Statement
+##  Problem Statement
 
 We classify each 5-minute return into one of six discrete bins:
 
@@ -28,18 +28,16 @@ We classify each 5-minute return into one of six discrete bins:
 
 ---
 
-## 🧹 Data Preprocessing & Feature Engineering
+##  Data Preprocessing & Feature Engineering
 
 - Used OHLCV (Open, High, Low, Close, Volume) minute-level data.
 - Computed **5-minute future returns** to assign class labels.
 - Engineered features:
-  - Price slopes over rolling windows: 5, 10, and 30 minutes.
-- Standardized all features using `StandardScaler`.
-- Handled missing and infinite values.
+  - Price slopes over rolling windows: 5, 10, and 30 minutes..
 
 ---
 
-## 🤖 Model
+##  Model
 
 Used a `RandomForestClassifier` from **scikit-learn** with:
 
@@ -49,3 +47,7 @@ max_depth = 8
 min_samples_leaf = 10
 class_weight = 'balanced'
 random_state = 42
+
+**##  Results**
+Accuracy: 28.81%
+Log Loss: 1.6662
